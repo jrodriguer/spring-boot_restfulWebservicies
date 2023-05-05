@@ -14,23 +14,19 @@ public class RecipeService {
     }
 	
 	public List<Recipe> getAllRecipes() {
-		// TODO Auto-generated method stub
-		return null;
+		return recipeRepository.findAll();
 	}
 
 	public Recipe getRecipeById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return recipeRepository.findById(id).orElse(null);
 	}
 
 	public Recipe saveRecipe(Recipe recipe) {
-		// TODO Auto-generated method stub
-		return null;
+		return recipeRepository.save(recipe);
 	}
 
 	public void deleteRecipeById(Long id) {
-		// TODO Auto-generated method stub
-		
+		recipeRepository.deleteById(id);
 	}
 
 }
