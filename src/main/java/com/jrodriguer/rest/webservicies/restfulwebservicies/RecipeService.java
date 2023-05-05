@@ -2,6 +2,8 @@ package com.jrodriguer.rest.webservicies.restfulwebservicies;
 
 import java.util.List;
 
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipe.Recipe;
+
 public class RecipeService {
 
 	public List<Recipe> getAllRecipes() {
