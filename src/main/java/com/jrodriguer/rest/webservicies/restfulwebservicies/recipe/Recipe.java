@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.data.annotation.Id;
 
-import com.jrodriguer.rest.webservicies.restfulwebservicies.Ingredient;
-
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -28,6 +26,6 @@ public class Recipe {
 
     @ElementCollection
     @CollectionTable(name = "recipe_ingredients")
-    private List<Ingredient> ingredients;
+    private List<String> ingredients;
 
 }
