@@ -1,8 +1,10 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipe;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.model.Recipe;
 
 @Service
 public class RecipeService {
@@ -10,8 +12,8 @@ public class RecipeService {
 	private final RecipeRepository recipeRepository;
 	
 	public RecipeService(RecipeRepository recipeRepository) {
-        this.recipeRepository = recipeRepository;
-    }
+  	this.recipeRepository = recipeRepository;
+  }
 	
 	public List<Recipe> getAllRecipes() {
 		return recipeRepository.findAll();
