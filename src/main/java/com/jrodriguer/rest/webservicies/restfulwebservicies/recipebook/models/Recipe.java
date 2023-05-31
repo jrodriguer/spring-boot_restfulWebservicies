@@ -1,4 +1,4 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.model;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
 
 import java.util.List;
 

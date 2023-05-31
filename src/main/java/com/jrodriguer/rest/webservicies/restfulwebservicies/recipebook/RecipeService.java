@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.model.Recipe;
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models.Recipe;
 
 @Service
 public class RecipeService {
