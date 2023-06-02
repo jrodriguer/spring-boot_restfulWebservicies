@@ -1,13 +1,29 @@
 package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
 
-public class ErrorResponse {
-  private int status;
-  private String error;
-  private String message;
+import java.time.LocalDateTime;
 
-  public ErrorResponse(int status, String error, String message) {
-    this.status = status;
-    this.error = error;
+public class ErrorResponse {
+  
+  private LocalDateTime timestamp;
+  private String message;
+  private String details;
+
+  public ErrorResponse(LocalDateTime timestamp, String message, String details) {
+    super();
+    this.timestamp = timestamp;
     this.message = message;
+    this.details = details;
+  }
+  
+  public LocalDateTime getTimestamp() {
+    return timestamp;
+  }
+
+  public String getMessage() {
+    return message;
+  }
+
+  public String getDetails() {
+    return details;
   }
 }
