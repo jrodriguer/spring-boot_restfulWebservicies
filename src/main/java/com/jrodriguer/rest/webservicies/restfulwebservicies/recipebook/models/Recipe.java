@@ -2,16 +2,16 @@ package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
 
 import java.util.List;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
-@Entity
+@EntityScan
 public class Recipe {
 
 	@Id
