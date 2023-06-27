@@ -2,26 +2,27 @@ package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
 
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.annotation.Id;
-
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@EntityScan
+@Entity
+@Table(name = "RECIPE")
 public class Recipe {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-	@Column(nullable = false)
+    @Column(name = "RECIPE_NAME", length = 50, nullable = false, unique = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "RECIPE_DESCRIPTION", nullable = false, unique = false)
     private String description;
 
     @ElementCollection
