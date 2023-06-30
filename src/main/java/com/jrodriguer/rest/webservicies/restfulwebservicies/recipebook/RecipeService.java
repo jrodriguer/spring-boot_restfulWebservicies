@@ -8,13 +8,13 @@ import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models.Re
 
 @Service
 public class RecipeService {
-	
-	private final RecipeRepository recipeRepository;
-	
-	public RecipeService(RecipeRepository recipeRepository) {
-  	this.recipeRepository = recipeRepository;
-  }
-	
+
+	private final RecipeSpringDataJpaRepository recipeRepository;
+
+	public RecipeService(RecipeSpringDataJpaRepository recipeRepository) {
+		this.recipeRepository = recipeRepository;
+	}
+
 	public List<Recipe> getAllRecipes() {
 		return recipeRepository.findAll();
 	}

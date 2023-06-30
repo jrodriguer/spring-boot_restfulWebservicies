@@ -9,10 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "RECIPE")
 public class Recipe {
 
     @Id
@@ -28,5 +26,15 @@ public class Recipe {
     @ElementCollection
     @CollectionTable(name = "recipe_ingredients")
     private List<String> ingredients;
+
+    public Recipe() {
+    }
+
+    public Recipe(Long id, String name, String description) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 
 }
