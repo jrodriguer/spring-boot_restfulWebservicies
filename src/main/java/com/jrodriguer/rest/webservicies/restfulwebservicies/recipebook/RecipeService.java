@@ -9,26 +9,26 @@ import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models.Re
 @Service
 public class RecipeService {
 
-	private final RecipeSpringDataJpaRepository recipeRepository;
+	private final RecipeSpringDataJpaRepository recipeSpringDataJpaRepository;
 
-	public RecipeService(RecipeSpringDataJpaRepository recipeRepository) {
-		this.recipeRepository = recipeRepository;
+	public RecipeService(RecipeSpringDataJpaRepository recipeSpringDataJpaRepository) {
+		this.recipeSpringDataJpaRepository = recipeSpringDataJpaRepository;
 	}
 
 	public List<Recipe> getAllRecipes() {
-		return recipeRepository.findAll();
+		return recipeSpringDataJpaRepository.findAll();
 	}
 
-	public Recipe getRecipeById(Long id) {
-		return recipeRepository.findById(id).orElse(null);
+	public Recipe retriveRecipe(Long id) {
+		return recipeSpringDataJpaRepository.findById(id).orElse(null);
 	}
 
 	public Recipe saveRecipe(Recipe recipe) {
-		return recipeRepository.save(recipe);
+		return recipeSpringDataJpaRepository.save(recipe);
 	}
 
-	public void deleteRecipeById(Long id) {
-		recipeRepository.deleteById(id);
+	public void deleteRecipe(Long id) {
+		recipeSpringDataJpaRepository.deleteById(id);
 	}
 
 }

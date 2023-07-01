@@ -16,12 +16,12 @@ import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models.Re
 @RestController
 @RequestMapping("/recipes")
 public class RecipeController {
-	
-	private final RecipeService recipeService;
-	
-	public RecipeController(RecipeService recipeService) {
-		this.recipeService = recipeService;
-	}
+
+    private final RecipeService recipeService;
+
+    public RecipeController(RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
 
     @GetMapping
     public List<Recipe> getAllRecipes() {
@@ -29,8 +29,8 @@ public class RecipeController {
     }
 
     @GetMapping("/{id}")
-    public Recipe getRecipeById(@PathVariable Long id) {
-        return recipeService.getRecipeById(id);
+    public Recipe retriveRecipe(@PathVariable Long id) {
+        return recipeService.retriveRecipe(id);
     }
 
     @PostMapping
@@ -39,7 +39,7 @@ public class RecipeController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteRecipeById(@PathVariable Long id) {
-        recipeService.deleteRecipeById(id);
+    public void deleteRecipe(@PathVariable Long id) {
+        recipeService.deleteRecipe(id);
     }
 }
