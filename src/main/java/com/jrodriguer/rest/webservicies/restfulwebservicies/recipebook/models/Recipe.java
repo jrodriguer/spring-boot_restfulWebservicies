@@ -24,7 +24,7 @@ public class Recipe {
     private String description;
 
     @ElementCollection
-    @CollectionTable(name = "recipe_ingredients")
+    @CollectionTable(name = "RECIPE_INGREDIENTS")
     private List<String> ingredients;
 
     public Recipe() {
