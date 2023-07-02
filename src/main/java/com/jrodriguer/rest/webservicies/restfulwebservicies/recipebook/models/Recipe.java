@@ -4,13 +4,11 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity(name = "RECIPE")
 public class Recipe {
@@ -30,17 +28,15 @@ public class Recipe {
     @JsonProperty("recipe_description")
     private String description;
 
-    @ElementCollection
-    @CollectionTable(name = "RECIPE_INGREDIENTS")
+    @OneToMany(mappedBy = "recipe")
     @JsonProperty("recipe_ingredients")
-    private List<String> ingredients;
+    private List<Ingredient> ingredients;
 
-    public Recipe(Integer id, String name, String description, List<String> ingredients) {
+    public Recipe(Integer id, String name, String description) {
         super();
         this.id = id;
         this.name = name;
         this.description = description;
-        this.ingredients = ingredients;
     }
 
 }
