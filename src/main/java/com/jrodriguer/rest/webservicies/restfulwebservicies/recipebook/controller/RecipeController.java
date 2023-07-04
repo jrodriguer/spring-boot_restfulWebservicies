@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.RecipeService;
-import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models.Recipe;
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans.Recipe;
 
 @RestController
 @RequestMapping("/recipes")

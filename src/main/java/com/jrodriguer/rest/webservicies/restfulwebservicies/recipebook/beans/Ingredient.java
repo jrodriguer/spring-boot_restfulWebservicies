@@ -1,4 +1,4 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

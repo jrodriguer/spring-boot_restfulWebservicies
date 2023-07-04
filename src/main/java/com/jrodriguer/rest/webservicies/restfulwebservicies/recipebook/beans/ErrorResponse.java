@@ -1,9 +1,9 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.models;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans;
 
 import java.time.LocalDateTime;
 
 public class ErrorResponse {
-  
+
   private LocalDateTime timestamp;
   private String message;
   private String details;
@@ -14,7 +14,7 @@ public class ErrorResponse {
     this.message = message;
     this.details = details;
   }
-  
+
   public LocalDateTime getTimestamp() {
     return timestamp;
   }
