@@ -1,14 +1,14 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.exceptions;
 
 import java.time.LocalDateTime;
 
-public class ErrorResponse {
+public class ErrorDetail {
 
   private LocalDateTime timestamp;
   private String message;
   private String details;
 
-  public ErrorResponse(LocalDateTime timestamp, String message, String details) {
+  public ErrorDetail(LocalDateTime timestamp, String message, String details) {
     super();
     this.timestamp = timestamp;
     this.message = message;

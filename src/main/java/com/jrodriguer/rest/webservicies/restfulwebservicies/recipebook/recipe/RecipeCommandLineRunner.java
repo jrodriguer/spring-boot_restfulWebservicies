@@ -1,14 +1,14 @@
-package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook;
+package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.recipe;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans.Ingredient;
-import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans.Recipe;
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.ingredient.Ingredient;
+import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.ingredient.IngredientSpringDataJpaRepository;
 
 @Component
-public class DbCommandLineRunner implements CommandLineRunner {
+public class RecipeCommandLineRunner implements CommandLineRunner {
 
   @Autowired
   private RecipeSpringDataJpaRepository repository;
