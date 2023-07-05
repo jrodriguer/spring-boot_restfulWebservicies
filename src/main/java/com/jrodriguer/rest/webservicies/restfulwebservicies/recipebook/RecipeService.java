@@ -19,7 +19,7 @@ public class RecipeService {
 		return recipeSpringDataJpaRepository.findAll();
 	}
 
-	public Recipe retriveRecipe(Long id) {
+	public Recipe retriveRecipe(Integer id) {
 		return recipeSpringDataJpaRepository.findById(id).orElse(null);
 	}
 
@@ -27,7 +27,7 @@ public class RecipeService {
 		return recipeSpringDataJpaRepository.save(recipe);
 	}
 
-	public void deleteRecipe(Long id) {
+	public void deleteRecipe(Integer id) {
 		recipeSpringDataJpaRepository.deleteById(id);
 	}
 

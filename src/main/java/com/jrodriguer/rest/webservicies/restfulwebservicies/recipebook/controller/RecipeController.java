@@ -29,7 +29,7 @@ public class RecipeController {
     }
 
     @GetMapping("/{id}")
-    public Recipe retriveRecipe(@PathVariable Long id) {
+    public Recipe retriveRecipe(@PathVariable Integer id) {
         return recipeService.retriveRecipe(id);
     }
 
@@ -39,7 +39,7 @@ public class RecipeController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteRecipe(@PathVariable Long id) {
+    public void deleteRecipe(@PathVariable Integer id) {
         recipeService.deleteRecipe(id);
     }
 }
