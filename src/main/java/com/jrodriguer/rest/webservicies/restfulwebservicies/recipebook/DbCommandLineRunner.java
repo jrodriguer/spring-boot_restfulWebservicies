@@ -8,7 +8,7 @@ import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans.Ing
 import com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.beans.Recipe;
 
 @Component
-public class RecipeCommandLineRunner implements CommandLineRunner {
+public class DbCommandLineRunner implements CommandLineRunner {
 
   @Autowired
   private RecipeSpringDataJpaRepository repository;
