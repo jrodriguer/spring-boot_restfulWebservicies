@@ -26,21 +26,17 @@ public class RecipeController {
         return recipeService.getAllRecipes();
     }
 
-    // @GetMapping("/{id}")
-    // public EntityModel<Recipe> retriveRecipe(@PathVariable Integer id) {
-    // Optional<Recipe> recipe = recipeService.retriveRecipe(id);
+    @GetMapping("/{id}")
+    public Recipe retriveRecipe(@PathVariable Integer id) {
+        Recipe recipe = recipeService.retriveRecipe(id);
 
-    // if (recipe.isEmpty())
-    // throw new RecipeNotFoundException("id:" + id);
+        if (recipe == null) {
+            throw new RecipeNotFoundException("id:" + id);
+        }
 
-    // EntityModel<User> entityModel = EntityModel.of(recipe.get());
-
-    // WebMvcLinkBuilder link =
-    // linkTo(methodOn(this.getClass()).retrieveAllUsers());
-    // entityModel.add(link.withRel("all-users"));
-
-    // return entityModel;
-    // }
+        return recipe;
+    
+    }
 
     @PostMapping
     public Recipe saveRecipe(@RequestBody Recipe recipe) {
