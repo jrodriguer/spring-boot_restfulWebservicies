@@ -11,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Recipe {
@@ -23,10 +24,11 @@ public class Recipe {
     private Integer id;
 
     @Column(name = "RECIPE_NAME", nullable = false, unique = false)
+    @Size(min = 2)
     @JsonProperty("recipe_name")
     private String name;
 
-    @Column(name = "RECIPE_DESCRIPTION", nullable = false, unique = false)
+    @Column(name = "RECIPE_DESCRIPTION", nullable = true, unique = false)
     @JsonProperty("recipe_description")
     private String description;
 

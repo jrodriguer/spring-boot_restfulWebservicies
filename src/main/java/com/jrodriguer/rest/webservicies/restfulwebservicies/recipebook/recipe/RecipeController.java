@@ -1,7 +1,6 @@
 package com.jrodriguer.rest.webservicies.restfulwebservicies.recipebook.recipe;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/recipes")
@@ -35,11 +36,10 @@ public class RecipeController {
         }
 
         return recipe;
-    
     }
 
     @PostMapping
-    public Recipe saveRecipe(@RequestBody Recipe recipe) {
+    public Recipe saveRecipe(@Valid @RequestBody Recipe recipe) {
         return recipeService.saveRecipe(recipe);
     }
 
@@ -47,15 +47,4 @@ public class RecipeController {
     public void deleteRecipe(@PathVariable Integer id) {
         recipeService.deleteRecipe(id);
     }
-
-    // @GetMapping("/{id}/ingredients")
-    // public List<Ingredient> retrievePostsForUser(@PathVariable int id) {
-    // Optional<Recipe> recipe = userRepository.findById(id);
-
-    // if (recipe.isEmpty())
-    // throw new RecipeNotFoundException("id:" + id);
-
-    // return recipe.get().getIngredients();
-
-    // }
 }
