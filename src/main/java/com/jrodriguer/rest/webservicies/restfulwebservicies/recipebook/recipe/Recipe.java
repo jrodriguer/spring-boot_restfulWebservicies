@@ -21,7 +21,7 @@ public class Recipe {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private int id;
 
     @Column(name = "RECIPE_NAME", nullable = false, unique = false)
     @Size(min = 2)
@@ -37,18 +37,18 @@ public class Recipe {
     @JsonIgnore
     private List<Ingredient> ingredients;
 
-    public Recipe(Integer id, String name, String description) {
+    public Recipe(int id, String name, String description) {
         super();
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
