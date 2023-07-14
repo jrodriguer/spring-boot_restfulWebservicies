@@ -23,17 +23,17 @@ public class Recipe {
     @GeneratedValue
     private int id;
 
-    @Column(name = "RECIPE_NAME", nullable = false, unique = false)
+    @Column(name = "RECIPE_NAME", nullable = false)
     @Size(min = 2)
     @JsonProperty("recipe_name")
     private String name;
 
-    @Column(name = "RECIPE_DESCRIPTION", nullable = true, unique = false)
+    @Column(name = "RECIPE_DESCRIPTION", nullable = true)
+    @Size(min = 2)
     @JsonProperty("recipe_description")
     private String description;
 
     @OneToMany(mappedBy = "recipe")
-    // @JsonProperty("recipe_ingredients")
     @JsonIgnore
     private List<Ingredient> ingredients;
 
